@@ -1,20 +1,24 @@
-# How to use (for myself)
+# 使い方（はてなブログユーザー向け）
 
-```
-$ virtualenv uploader
-$ source  uploader/bin/activate
-$ pip install -r requirements.txt
-$ pip install lambda-uploader # 最新のリリース版をインストール
-$ pip install git+https://github.com/rackerlabs/lambda-uploader # git main branch をインストール
-$ aws configure
-AWS Access Key ID [None]: xx
-AWS Secret Access Key [None]: xx
-Default region name [ap-northeast-1]: ap-northeast-1
-Default output format [None]:
-$ lambda-uploader
-λ Building Package
-λ Uploading Package
-λ Fin
-```
+## 必要知識
 
-[AWS Lambda Pythonをlambda-uploaderでデプロイ ｜ Developers.IO](http://dev.classmethod.jp/cloud/deploy-aws-lambda-python-with-lambda-uploader/)
+* AWS
+* AWS lambda
+
+## 環境変数
+
+* Hatena_Blog_URL : はてなブログURL（http://lirlia.hatenablog.com/)
+* Twitter_Consumer_Key : Twitter Consumer Key
+* Twitter_Consumer_Secret_Key : Twitter Consumer Secret
+* Twitter_Access_Token_Key : Twitter Access Token
+* Twitter_Access_Token_Secret : Twitter Access Token Secret
+
+## 使い方
+
+上記の環境変数を指定するだけで、特定はてなブログの過去記事をランダムでTwitterアカウントでつぶやきます。
+
+本プログラムはAWS Lambdaで動かすことを想定しています。
+
+# License
+
+MIT

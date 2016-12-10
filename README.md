@@ -8,6 +8,7 @@
 ## 環境変数
 
 * Hatena_Blog_URL : はてなブログURL（http://lirlia.hatenablog.com/)
+* Twitter_Hash_Tag : Twitterのハッシュタグ（#なし）
 * Twitter_Consumer_Key : Twitter Consumer Key
 * Twitter_Consumer_Secret_Key : Twitter Consumer Secret
 * Twitter_Access_Token_Key : Twitter Access Token

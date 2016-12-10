@@ -10,7 +10,8 @@ import json                 # HTTPリクエストのjson利用
 from requests_oauthlib import OAuth1Session # Twitter認証用のライブラリ
 
 # ブログのURLを環境変数から取得する
-blogURL = os.environ.get('Hatena_Blog_URL')
+blogURL = os.environ.get('Hatena_Blog_URL')     # BlogURL(末尾/付き)
+hashTag = os.environ.get('Twitter_Hash_Tag')    # ハッシュタグ #なし
 
 ## Twitter系の変数
 # OAuth認証 セッションを開始
@@ -68,7 +69,7 @@ def Tweet(articleInfo, articleURL):
 
     # 文章作成
     data = \
-        u'ーこんな記事も読んでみませんか？ー\n#なぞまっぷ\n\n' \
+        u'ーこんな記事も読んでみませんか？ー\n#' + hashTag +'\n\n' \
         + articleInfo['title'] + '\n\n' \
         u'▼記事はこちらから！\n' + articleURL
 
